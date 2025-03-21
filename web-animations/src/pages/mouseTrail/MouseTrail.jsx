@@ -2,17 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './MouseTrail.css';
 
 //The array of images to be rendered
-const images = [
-    '/images/image-1.JPG',
-    '/images/image-2.JPG',
-    '/images/image-3.JPG',
-    '/images/image-4.JPG',
-    '/images/image-5.JPG',
-    '/images/image-6.JPG',
-    '/images/image-7.JPG',
-    '/images/image-8.JPG',
-];
-//images in this demo are from Ege Berkina 👉 https://x.com/egeberkina
+import { images } from '../../constants/images';
 
 const MouseTrail = () => {
     const [positions, setPositions] = useState([]);
@@ -66,7 +56,7 @@ const MouseTrail = () => {
                             left: `${pos.x}px`,
                             top: `${pos.y}px`,
                             transform: `translate(-50%, -50%)`,
-                            opacity: 1 - (index / positions.length) * 0.8,
+                            opacity: 1,
                         }}
                     >
                         <img src={images[index % images.length]} alt='' className='trail-image' />
