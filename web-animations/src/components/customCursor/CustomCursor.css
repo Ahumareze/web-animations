@@ -1,0 +1,21 @@
+/* CustomCursor.css */
+body {
+    cursor: none;
+}
+  
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+  
+.custom-cursor.visible {
+    opacity: 1;
+}
+
+.custom-cursor img{
+    height: 30px;
+    width: 30px;
+}
